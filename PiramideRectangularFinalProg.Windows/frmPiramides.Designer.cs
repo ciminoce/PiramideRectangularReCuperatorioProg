@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             dgvDatos = new DataGridView();
             panelCantidad = new Panel();
             txtCantidad = new TextBox();
@@ -48,6 +48,7 @@
             toolStripSeparator2 = new ToolStripSeparator();
             tsbSalir = new ToolStripButton();
             colLado = new DataGridViewTextBoxColumn();
+            colAltura = new DataGridViewTextBoxColumn();
             colCantidad = new DataGridViewTextBoxColumn();
             colMaterial = new DataGridViewTextBoxColumn();
             colVolumen = new DataGridViewTextBoxColumn();
@@ -61,10 +62,10 @@
             // 
             dgvDatos.AllowUserToAddRows = false;
             dgvDatos.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(224, 224, 224);
-            dgvDatos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(224, 224, 224);
+            dgvDatos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dgvDatos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvDatos.Columns.AddRange(new DataGridViewColumn[] { colLado, colCantidad, colMaterial, colVolumen, colArea });
+            dgvDatos.Columns.AddRange(new DataGridViewColumn[] { colLado, colAltura, colCantidad, colMaterial, colVolumen, colArea });
             dgvDatos.Dock = DockStyle.Fill;
             dgvDatos.Location = new Point(0, 70);
             dgvDatos.MultiSelect = false;
@@ -225,6 +226,12 @@
             colLado.Name = "colLado";
             colLado.ReadOnly = true;
             // 
+            // colAltura
+            // 
+            colAltura.HeaderText = "Altura";
+            colAltura.Name = "colAltura";
+            colAltura.ReadOnly = true;
+            // 
             // colCantidad
             // 
             colCantidad.HeaderText = "Cantidad";
@@ -236,7 +243,6 @@
             colMaterial.HeaderText = "Material";
             colMaterial.Name = "colMaterial";
             colMaterial.ReadOnly = true;
-            colMaterial.Width = 397;
             // 
             // colVolumen
             // 
@@ -291,6 +297,7 @@
         private ToolStripSeparator toolStripSeparator2;
         private ToolStripButton tsbSalir;
         private DataGridViewTextBoxColumn colLado;
+        private DataGridViewTextBoxColumn colAltura;
         private DataGridViewTextBoxColumn colCantidad;
         private DataGridViewTextBoxColumn colMaterial;
         private DataGridViewTextBoxColumn colVolumen;
